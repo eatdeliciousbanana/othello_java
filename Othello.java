@@ -40,12 +40,30 @@ public class Othello {
 
     // boardを返す
     public int[][] getBoard() {
-        return this.board;
+        int ret[][] = new int[10][];
+        for (int i = 0; i < 10; i++) {
+            ret[i] = new int[10];
+        }
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                ret[i][j] = this.board[i][j];
+            }
+        }
+        return ret;
     }
 
     // putcheckを返す
     public boolean[][] getPutcheck() {
-        return this.putcheck;
+        boolean ret[][] = new boolean[10][];
+        for (int i = 0; i < 10; i++) {
+            ret[i] = new boolean[10];
+        }
+        for (int i = 1; i <= 8; i++) {
+            for (int j = 1; j <= 8; j++) {
+                ret[i][j] = this.putcheck[i][j];
+            }
+        }
+        return ret;
     }
 
     // turnを返す
@@ -192,14 +210,8 @@ public class Othello {
 
     // 他のOthelloクラスインスタンスをロードする
     public void load(Othello game) {
-        int board[][] = game.getBoard();
-        boolean putcheck[][] = game.getPutcheck();
-        for (int i = 1; i <= 8; i++) {
-            for (int j = 1; j <= 8; j++) {
-                this.board[i][j] = board[i][j];
-                this.putcheck[i][j] = putcheck[i][j];
-            }
-        }
+        this.board = game.getBoard();
+        this.putcheck = game.getPutcheck();
         this.turn = game.getTurn();
         this.turnNum = game.getTurnNum();
         this.end = game.getEnd();
