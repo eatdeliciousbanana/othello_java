@@ -1,9 +1,9 @@
 public class Othello {
     // マスの状態を表す定数
-    private final int WHITE = 1;
-    private final int BLACK = -1;
-    private final int NONE = 0;
-    private final int BORDER = 2;
+    public static final int WHITE = 1;
+    public static final int BLACK = -1;
+    public static final int NONE = 0;
+    public static final int BORDER = 2;
 
     // メンバ変数
     private int board[][]; // オセロ盤
@@ -222,8 +222,9 @@ public class Othello {
         System.out.println(this.turnNum + "手目");
         System.out.println(this.turn == BLACK ? "黒のターン" : "白のターン");
         System.out.println("　１２３４５６７８");
+        char num[] = { '０', '１', '２', '３', '４', '５', '６', '７', '８' };
         for (int i = 1; i <= 8; i++) {
-            System.out.print(i + " ");
+            System.out.print(num[i]);
             for (int j = 1; j <= 8; j++) {
                 switch (this.board[i][j]) {
                     case BLACK:
