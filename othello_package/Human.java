@@ -1,3 +1,5 @@
+package othello_package;
+
 import java.util.Scanner;
 import java.util.InputMismatchException;
 

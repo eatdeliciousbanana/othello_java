@@ -1,3 +1,5 @@
+package othello_package;
+
 public class Othello {
     // マスの状態を表す定数
     public static final int WHITE = 1;
@@ -13,7 +15,7 @@ public class Othello {
     private boolean end; // 終了しているかどうか
 
     // コンストラクタ
-    Othello() {
+    public Othello() {
         this.board = new int[10][];
         for (int i = 0; i < 10; i++) {
             this.board[i] = new int[10];

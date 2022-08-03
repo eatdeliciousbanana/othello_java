@@ -1,3 +1,5 @@
+package othello_package;
+
 import java.util.Random;
 
 public class MinAI extends Player {

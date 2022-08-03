@@ -1,3 +1,5 @@
+package othello_package;
+
 public class Position {
     private int x;
     private int y;
